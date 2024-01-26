@@ -24,6 +24,7 @@ class RegisterController extends Controller
         $user['password'] = Hash::make($user['password']);
       
          if($request->image==null){
+            //..
             $user['image']="https://upload.najd-products.com/public/storage/images/profile-image.jpg";
         }
 
