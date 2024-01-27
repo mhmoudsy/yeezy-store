@@ -28,7 +28,7 @@ class CategoryController extends Controller
             Storage::disk('public')->putFileAs('category_image', $image,$imageName);
             $path = Storage::disk('public')->putFile('category_image', $request->file('category_image'));
             $url = Storage::disk('public')->url($path);
-            $parameter['category_image']=$url;
+            $parameter['category_image']=$path;
          
          
 

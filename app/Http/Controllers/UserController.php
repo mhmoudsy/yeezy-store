@@ -157,7 +157,7 @@ class UserController extends Controller
             $path = Storage::disk('public')->putFile('images', $request->file('image'));
             $url = Storage::disk('public')->url($path);
 
-            $user->image=$url;
+            $user->image=$path;
          
          
 

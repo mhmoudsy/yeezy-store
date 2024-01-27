@@ -81,7 +81,7 @@ class ProductController extends Controller
             Storage::disk('public')->putFileAs('product_image', $image,$imageName);
             $path = Storage::disk('public')->putFile('product_image', $request->file('product_image'));
             $url = Storage::disk('public')->url($path);
-            $product['product_image']=$url;
+            $product['product_image']=$path;
          
          
 
